@@ -1,4 +1,4 @@
-package main
+package gotoken
 
 import (
 	"math/rand"
@@ -14,12 +14,4 @@ func init() {
 
 type Token interface {
 	Generate() string
-}
-
-func GenerateToken(length int) string {
-	bytes := make([]rune, length)
-	for i := range(bytes) {
-		bytes[i] = chars[rand.Intn(rangeSize)]
-	}
-	return string(bytes)
 }
