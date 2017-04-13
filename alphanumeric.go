@@ -1,4 +1,4 @@
-package main
+package gotoken
 
 import "math/rand"
 
@@ -8,7 +8,7 @@ type AlphanumericToken struct {
 	length int
 }
 
-func NewAlphanumericTokenGenerator (length int) *AlphanumericToken {
+func NewAlphanumericGenerator (length int) *AlphanumericToken {
 	return &AlphanumericToken{
 		chars: []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"),
 		rangeSize: len(chars),
